@@ -4,6 +4,7 @@ class Gdal < Formula
   url "https://download.osgeo.org/gdal/3.1.2/gdal-3.1.2.tar.xz"
   sha256 "767c8d0dfa20ba3283de05d23a1d1c03a7e805d0ce2936beaff0bb7d11450641"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 "b781dd4174e448f161d1e3f38fa898fea35ea16cb9fa6212cbcd0cffd6951e81" => :catalina
@@ -53,6 +54,13 @@ class Gdal < Formula
   end
 
   conflicts_with "cpl", because: "both install cpl_error.h"
+
+  # Remove on next release.
+  # https://github.com/OSGeo/gdal/pull/2825
+  patch :p2 do
+    url "https://github.com/OSGeo/gdal/commit/44a478267de3e71a87ee3c6c65bd05478f631146.patch?full_index=1"
+    sha256 "963737e09f6d077c75c02e26ae7d3578ea72124fc31b6b96592c62f02ad1a804"
+  end
 
   def install
     args = [
