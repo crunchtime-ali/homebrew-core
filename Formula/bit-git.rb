@@ -1,8 +1,8 @@
 class BitGit < Formula
   desc "Bit is a modern Git CLI"
   homepage "https://github.com/chriswalz/bit"
-  url "https://github.com/chriswalz/bit/archive/v1.0.1.tar.gz"
-  sha256 "5ad1ee17ba015aa542c0794d9317045068963048203c8323eda528f419b1d470"
+  url "https://github.com/chriswalz/bit/archive/v1.0.2.tar.gz"
+  sha256 "c87e02390b63abea91a6e344841351d3139e6179fda52283a9d3562a98aa0ee5"
   license "Apache-2.0"
 
   bottle do
