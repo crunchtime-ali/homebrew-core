@@ -11,8 +11,6 @@ class Jetty < Formula
     regex(/href=.*?jetty-distribution[._-]v?(\d+(?:\.\d+)+(?:\.v\d+)?)\.t/i)
   end
 
-  bottle :unneeded
-
   depends_on "openjdk"
 
   def install
