@@ -42,6 +42,7 @@ class Argocd < Formula
 
     # Providing argocd with an empty config file returns the contexts table header
     touch testpath/"argocd-config"
+    (testpath/"argocd-config").chmod 0600
     assert_match "CURRENT  NAME  SERVER\n",
       shell_output("#{bin}/argocd context --config ./argocd-config")
   end
