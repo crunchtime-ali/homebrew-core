@@ -1,8 +1,8 @@
 class Ilmbase < Formula
   desc "OpenEXR ILM Base libraries (high dynamic-range image file format)"
   homepage "https://www.openexr.com/"
-  url "https://github.com/AcademySoftwareFoundation/openexr/archive/v2.5.7.tar.gz"
-  sha256 "36ecb2290cba6fc92b2ec9357f8dc0e364b4f9a90d727bf9a57c84760695272d"
+  url "https://github.com/AcademySoftwareFoundation/openexr/archive/v3.1.5.tar.gz"
+  sha256 "93925805c1fc4f8162b35f0ae109c4a75344e6decae5a240afdfce25f8a433ec"
   license "BSD-3-Clause"
 
   bottle do
