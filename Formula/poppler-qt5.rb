@@ -54,6 +54,10 @@ class PopplerQt5 < Formula
   def install
     ENV.cxx11
 
+    # Fix for BSD sed. Reported upstream at:
+    # https://gitlab.freedesktop.org/poppler/poppler/-/issues/1290
+    inreplace "CMakeLists.txt", "${SED} -i", "\\0 -e"
+
     args = std_cmake_args + %W[
       -DBUILD_GTK_TESTS=OFF
       -DENABLE_BOOST=OFF
