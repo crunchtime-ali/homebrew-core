@@ -57,6 +57,10 @@ class Poppler < Formula
   def install
     ENV.cxx11
 
+    # Fix for BSD sed. Reported upstream at:
+    # https://gitlab.freedesktop.org/poppler/poppler/-/issues/1290
+    inreplace "CMakeLists.txt", "${SED} -i", "\\0 -e"
+
     # removes /usr/include from CFLAGS (not clear why)
     ENV["PKG_CONFIG_SYSTEM_INCLUDE_PATH"] = "/usr/include" if MacOS.version < :mojave
 
