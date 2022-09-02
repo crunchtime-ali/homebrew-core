@@ -54,12 +54,15 @@ class Poppler < Formula
     sha256 "2cec05cd1bb03af98a8b06a1e22f6e6e1a65b1e2f3816cb3069bb0874825f08c"
   end
 
+  # Fix build with BSD sed.
+  # https://gitlab.freedesktop.org/poppler/poppler/-/merge_requests/1266
+  patch do
+    url "https://gitlab.freedesktop.org/poppler/poppler/-/commit/9e0d0e65261384bde8cb7f1932738bbeb19d3292.diff"
+    sha256 "1915c131129a81444ecb0c61489b8833d4cd9b430e21a1b496358b8f7004324c"
+  end
+
   def install
     ENV.cxx11
-
-    # Fix for BSD sed. Reported upstream at:
-    # https://gitlab.freedesktop.org/poppler/poppler/-/issues/1290
-    inreplace "CMakeLists.txt", "${SED} -i", "\\0 -e"
 
     # removes /usr/include from CFLAGS (not clear why)
     ENV["PKG_CONFIG_SYSTEM_INCLUDE_PATH"] = "/usr/include" if MacOS.version < :mojave
