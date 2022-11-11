@@ -61,15 +61,15 @@ class Podman < Formula
 
   resource "netavark" do
     on_linux do
-      url "https://github.com/containers/netavark/archive/refs/tags/v1.2.0.tar.gz"
-      sha256 "35b710197f321a2e45c59460fd8faf67b7b8ebc345d22aa8ecccf806790c6edc"
+      url "https://github.com/containers/netavark/archive/refs/tags/v1.3.0.tar.gz"
+      sha256 "cc8a8e03498cb9b4c74fdbda09a64fdf9000fea398d07073c4e368fc83d35f56"
     end
   end
 
   resource "aardvark-dns" do
     on_linux do
-      url "https://github.com/containers/aardvark-dns/archive/refs/tags/v1.2.0.tar.gz"
-      sha256 "434163027660feebb87e288d9c9f8468a1a9d1a632d1f9fe0a84585dfde3f4dd"
+      url "https://github.com/containers/aardvark-dns/archive/refs/tags/v1.3.0.tar.gz"
+      sha256 "6dd1ce4346ed5c57bbd990140e02e69c036919032582b937d2ad7835329d3bc3"
     end
   end
 
