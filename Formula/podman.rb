@@ -178,6 +178,7 @@ class Podman < Formula
       assert_equal %W[
         #{bin}/podman
         #{bin}/podman-remote
+        #{bin}/podmansh
       ].sort, Dir[bin/"*"].sort
       assert_equal %W[
         #{libexec}/podman/catatonit
