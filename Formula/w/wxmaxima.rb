@@ -1,8 +1,8 @@
 class Wxmaxima < Formula
   desc "Cross platform GUI for Maxima"
   homepage "https://wxmaxima-developers.github.io/wxmaxima/"
-  url "https://github.com/wxMaxima-developers/wxmaxima/archive/refs/tags/Version-23.04.1.tar.gz"
-  sha256 "869e20a02e0da97bd92da20e8a9b8a04facaea387feb09c16c5f23445b4e163f"
+  url "https://github.com/wxMaxima-developers/wxmaxima/archive/refs/tags/Version-23.07.0.tar.gz"
+  sha256 "410cbd98af570945f0bb619ad8913b32ee90b9369ff7970606b1cdbd6e1a807b"
   license "GPL-2.0-or-later"
   head "https://github.com/wxMaxima-developers/wxmaxima.git", branch: "main"
 
@@ -23,6 +23,8 @@ class Wxmaxima < Formula
   depends_on "cmake" => :build
   depends_on "gettext" => :build
   depends_on "ninja" => :build
+  # see discussions in here, https://github.com/wxMaxima-developers/wxmaxima/issues/1784
+  depends_on xcode: ["13.0", :build]
   depends_on "maxima"
   depends_on "wxwidgets"
 
